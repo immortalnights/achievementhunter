@@ -4,6 +4,7 @@ define(function(require) {
 	const Marionette = require('backbone.marionette');
 	const Friends = require('player/collections/friends');
 	const friendTemplate = require('tpl!player/templates/friend.html');
+	const _ = require('underscore');
 
 	return Marionette.View.extend({
 		template: _.template('<h5><%- tr("Friends") %></h5><div id="friends"></div><div id="friendsfooter"></div>'),

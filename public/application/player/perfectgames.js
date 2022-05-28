@@ -4,6 +4,7 @@ define(function(require) {
 	const Marionette = require('backbone.marionette');
 	const GameList = require('core/views/gamelist');
 	const PlayerGames = require('player/collections/games');
+	const _ = require('underscore');
 
 	return Marionette.View.extend({
 		template: _.template('<h5><%- tr("Perfect Games") %> <small class="blue-grey-text text-darken-2"><%- tr("Games with all achievements unlocked.") %></small></h5><div id="gamelist"></div>'),

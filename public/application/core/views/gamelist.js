@@ -4,6 +4,7 @@ define(function(require) {
 	const Marionette = require('backbone.marionette');
 	const List = require('core/views/list');
 	const gameTemplate = require('tpl!player/templates/game.html');
+	const _ = require('underscore');
 
 	const EmptyView = Marionette.View.extend({
 		template: false,

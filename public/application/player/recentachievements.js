@@ -5,6 +5,7 @@ define(function(require) {
 	const GameList = require('core/views/gamelist');
 	const PlayerAchievements = require('player/collections/achievements');
 	const gameTemplate = require('tpl!player/templates/gamewithachievements.html');
+	const _ = require('underscore');
 
 	return Marionette.View.extend({
 		template: _.template('<h5><%- tr("Recent Achievements") %> <small class="blue-grey-text text-darken-2"><%- tr("Recent unlocked achievements.") %></small></h5><div id="gamelist"></div>'),

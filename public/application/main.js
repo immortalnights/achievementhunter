@@ -27,6 +27,8 @@ let once = false;
 requirejs(['application', 'jquery', 'underscore', 'moment',/*'fontawesome', 'fontawesome-solid', 'fontawesome-regular', 'fontawesome-brands'*/], function(application, $, _, moment) {
 	'use strict';
 
+	window._ = _;
+
 	const app = application();
 	_.defer(app.start.bind(app));
 }, function(err) {

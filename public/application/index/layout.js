@@ -4,6 +4,7 @@ define(function(require) {
 	const Marionette = require('backbone.marionette');
 	const Form = require('core/form');
 	const formTemplate = require('tpl!index/templates/form.html');
+	const _ = require('underscore');
 
 	return Marionette.View.extend({
 		template: _.template('<div id="playerform" class="" style="margin-top: 10rem"></div><div id="summary"></div>'),

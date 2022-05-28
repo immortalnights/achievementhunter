@@ -1,5 +1,6 @@
 define(function(require) {
-	var Marionette = require('backbone.marionette');
+	const Marionette = require('backbone.marionette');
+	const _ = require('underscore');
 
 	return Marionette.NextCollectionView.extend({
 		tagName: 'ul',
