@@ -6,12 +6,12 @@ define(function(require) {
 	return Backbone.Model.extend({
 		url: function() { return '/api/Games/' + encodeURIComponent(this.id); },
 
-		resynchronize: function()
+		resynchronize: function(data)
 		{
 			return Backbone.ajax({
 				url: this.url() + '/Resynchronize/invoke/',
 				method: 'put',
-				data: JSON.stringify({}),
+				data: JSON.stringify(data),
 				contentType: 'application/json'
 			});
 		}

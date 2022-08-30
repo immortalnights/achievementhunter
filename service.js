@@ -152,6 +152,7 @@ module.exports = class Service {
 
 	queueResynchronizePlayerAchievements(playerId, gameId)
 	{
+		debug(`Queue resynchronization of player ${playerId} achievements for ${gameId}`);
 		return this.queue.push({
 			id: 'resynchronize_player_' + playerId + '_game_' + gameId,
 			args: [playerId, gameId],
@@ -177,7 +178,7 @@ module.exports = class Service {
 				const games = await player.resynchronize();
 
 				// queue new or played games for resynchronization
-				debug(`Queing resynchronization of ${games.length} games`);
+				debug(`Queuing resynchronization of ${games.length} games`);
 				games.forEach((game) => {
 					this.queueResynchronizeGame(game.appid);
 					this.queueResynchronizePlayerAchievements(id, game.appid);

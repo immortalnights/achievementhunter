@@ -39,7 +39,7 @@ core.start(systemConfig)
 
 	webserver.on('resynchronize', (message) => {
 		console.log("received 'resynchronize' event from web server", message);
-		
+
 		switch (message.resource)
 		{
 			case 'player':
@@ -50,6 +50,11 @@ core.start(systemConfig)
 			case 'game':
 			{
 				service.queueResynchronizeGame(message.id);
+				break;
+			}
+			case 'player_achievements':
+			{
+				service.queueResynchronizePlayerAchievements(message.id, message.gameId);
 				break;
 			}
 		}

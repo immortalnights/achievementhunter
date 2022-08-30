@@ -15,12 +15,12 @@ define(function(require) {
 		},
 
 		events: {
-			'click a[data-control="resynchronize"]': 'onResychronize'
+			'click a[data-control="resynchronize"]': 'onResynchronize'
 		},
 
 		initialize: function(options)
 		{
-			Marionette.View.prototype.initialize.call(this, options)
+			Marionette.View.prototype.initialize.call(this, options);
 		},
 
 		serializeData: function()
@@ -34,7 +34,6 @@ define(function(require) {
 				minDifficulty: 0,
 				maxDifficulty: 0
 			};
-
 
 			const achievements = this.model.get('achievements');
 			if (this.getOption('playerId'))
@@ -113,7 +112,7 @@ define(function(require) {
 			}));
 		},
 
-		onResychronize: function()
+		onResynchronize: function()
 		{
 			let data;
 			const playerId = this.getOption('playerId');
@@ -122,7 +121,7 @@ define(function(require) {
 				data = { playerId: playerId };
 			}
 
-			this.model.resynchronize({ data: data });
+			this.model.resynchronize(data);
 		}
 	});
 });
