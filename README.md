@@ -2,5 +2,5 @@
 
 Steam achievements tracker and planner.
 
-### Beta site
-[link](http://steam.seventh.space)
+### Replacement
+https://github.com/immortalnights/django-achievementchaser
